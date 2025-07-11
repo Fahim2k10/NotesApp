@@ -37,20 +37,6 @@ const Sidebar = () => {
       </NavLink>
 
       <NavLink
-        to="/important"
-        className={({ isActive }) =>
-          `${baseLink} ${
-            isActive
-              ? "bg-indigo-700 text-white border-l-4 border-white"
-              : "text-gray-800 hover:bg-indigo-600 hover:text-white"
-          }`
-        }
-      >
-        <span className={iconClass}>flag</span>
-        <span className="ml-3">Important</span>
-      </NavLink>
-
-      <NavLink
         to="/trash"
         className={({ isActive }) =>
           `${baseLink} ${
