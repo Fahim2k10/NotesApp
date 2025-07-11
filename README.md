@@ -6,7 +6,7 @@ A clean and responsive Notes App built with React, Tailwind CSS, and global stat
 
 ## 🔗 Live Demo
 
-👉 [Live Site](https://your-live-url.com)  
+👉 [Live Site](https://notesapp-byfahim2k10.netlify.app/)  
 <!-- Replace with actual deployed link -->
 
 ---
