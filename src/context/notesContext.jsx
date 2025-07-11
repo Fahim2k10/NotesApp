@@ -1,5 +1,5 @@
-import notesReducer from "../reducers/notesReducer";
 import { createContext, useContext, useReducer } from "react";
+import notesReducer from "../reducers/notesReducer";
 
 const NotesContext = createContext();
 
@@ -9,16 +9,17 @@ const NotesProvider = ({ children }) => {
     text: "",
     notes: [],
     archive: [],
+    trash: [],
   };
 
-  const [{ title, text, notes, archive }, dispatchState] = useReducer(
+  const [{ title, text, notes, archive, trash }, dispatchState] = useReducer(
     notesReducer,
     initialState
   );
 
   return (
     <NotesContext.Provider
-      value={{ notes, text, title, archive, dispatchState }}
+      value={{ title, text, notes, archive, trash, dispatchState }}
     >
       {children}
     </NotesContext.Provider>
