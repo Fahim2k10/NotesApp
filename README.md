@@ -1,7 +1,6 @@
 # 📝 Notes App
 
 A clean and responsive Notes App built with React, Tailwind CSS, and global state management using `useContext` and `useReducer`. Create, pin, archive, delete, and manage notes with ease.
-Used AI for responsive tailwind and this readme
 ---
 
 ## 🔗 Live Demo
@@ -12,6 +11,7 @@ Used AI for responsive tailwind and this readme
 ---
 
 ## ✨ Features
+*Used AI for responsive tailwind and this readme
 
 - 🖊️ **Create Notes** — Add text and titles to capture your ideas.
 - 📌 **Pin Notes** — Keep important notes on top.
