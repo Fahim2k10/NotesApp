@@ -1,11 +1,12 @@
+import { useState } from "react";
 import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import NotesCard from "../../components/notesCard";
 import { useNotes } from "../../context/notesContext";
 
 const Home = () => {
-  const { title, text, notes, dispatchState, archive } = useNotes();
-  console.log(archive);
+  const { title, text, notes, dispatchState } = useNotes();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const onTitleChange = (e) => {
     dispatchState({
@@ -31,13 +32,17 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
-      <main className="flex gap-5 min-h-screen bg-gray-50">
-        <Sidebar />
-        <div className="mt-10 w-full px-10">
-          {/* Note Input Box */}
+      <Navbar onMenuClick={() => setSidebarOpen(true)} />
+
+      <div className="flex min-h-screen">
+        {/* Sidebar Drawer & Static */}
+        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
+        {/* Main Content */}
+        <main className="flex-1 p-4 sm:p-6 md:p-10 bg-gray-50 mt-2 lg:mt-0">
+          {/* Note Input */}
           <div className="flex justify-center mb-10">
-            <div className="w-full max-w-md bg-white rounded-2xl shadow-md p-4 border border-gray-300 flex flex-col gap-3">
+            <div className="w-full max-w-xl bg-white rounded-2xl shadow-md p-4 border border-gray-300 flex flex-col gap-3">
               <input
                 value={title}
                 onChange={onTitleChange}
@@ -62,14 +67,14 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Notes Section */}
+          {/* Notes Display */}
           <div className="flex flex-col gap-12">
             {pinnedNotes.length > 0 && (
               <div>
                 <h2 className="text-2xl font-semibold text-indigo-700 mb-4">
                   📌 Pinned Notes
                 </h2>
-                <div className="flex flex-wrap gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {pinnedNotes.map(({ id, title, text, isPinned }) => (
                     <NotesCard
                       key={id}
@@ -89,7 +94,7 @@ const Home = () => {
                   🗂️ Other Notes
                 </h2>
               )}
-              <div className="flex flex-wrap gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {otherNotes.length > 0 ? (
                   otherNotes.map(({ id, title, text, isPinned }) => (
                     <NotesCard
@@ -106,8 +111,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </>
   );
 };
