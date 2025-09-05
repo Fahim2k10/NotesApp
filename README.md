@@ -1,40 +1,34 @@
-# 📝 Notes App
+# Notes App
 
-A clean and responsive Notes App built with React, Tailwind CSS, and global state management using `useContext` and `useReducer`. Create, pin, archive, delete, and manage notes with ease.
----
 
-## 🔗 Live Demo
-
-👉 [Live Site](https://notesapp-byfahim2k10.netlify.app/)  
+[Live Site](https://notesapp-byfahim2k10.netlify.app/)  
 <!-- Replace with actual deployed link -->
 
----
-
-## ✨ Features
+## Features
 *Used AI for responsive tailwind and this readme
 
-- 🖊️ **Create Notes** — Add text and titles to capture your ideas.
-- 📌 **Pin Notes** — Keep important notes on top.
-- 🗄️ **Archive** — Hide notes from the main list while keeping them accessible.
-- 🗑️ **Trash** — Soft-delete notes with the option to permanently delete or restore.
-- 🔄 **Restore** — Bring back notes from archive or trash.
-- 📦 **Global State** — Managed using `useReducer` and `useContext`.
-- 🌈 **Responsive UI** — Built using Tailwind CSS.
+- **Create Notes** — Add text and titles to capture your ideas.
+- **Pin Notes** — Keep important notes on top.
+- **Archive** — Hide notes from the main list while keeping them accessible.
+- **Trash** — Soft-delete notes with the option to permanently delete or restore.
+- **Restore** — Bring back notes from archive or trash.
+- **Global State** — Managed using `useReducer` and `useContext`.
+- **Responsive UI** — Built using Tailwind CSS.
 
 ---
 
 
-## ⚙️ Tech Stack
+## Tech Stack
 
-- ⚛️ React
-- 🌬️ Tailwind CSS
-- 🧠 Context API + useReducer
-- 🆔 UUID for unique note identification
-- 🗂️ React Router for multi-page navigation
+- React
+- Tailwind CSS
+- Context API + useReducer
+- UUID for unique note identification
+- React Router for multi-page navigation
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
